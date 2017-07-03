@@ -1,0 +1,48 @@
+
+<html>
+
+    <head>
+        
+        <title>How many? -Java Game</title>
+    
+    </head>
+
+    <body >
+      
+        <h1>How many fingers am I holding up?</h1>
+        <h3> Hint: Guess between numbers 0 & 5 </h3>
+        
+        <p><input id="enterGuess" type="text" ></p>
+    
+        <p><button id="check">Guess!</button></p>
+
+        <img src="fingers.png"width="400">
+        
+
+      
+        <script type="text/javascript">
+            
+            document.getElementById("check").onclick = function() {
+
+                var randomNum=Math.random();
+                randomNum= randomNum*6;
+                randomNum=Math.floor(randomNum);
+                    
+
+                    if(document.getElementById("enterGuess").value==randomNum){
+                        alert("CORRECT!! You got it!");
+                    }
+                    else if(randomNum==1){
+                        alert("Nope, I was actually holding up " +randomNum+" finger!");
+                    }
+                    else{
+                        alert("Nope, I was actually holding up " +randomNum+" fingers!");
+                    }
+
+			}
+            
+        </script>
+        
+    </body>
+
+</html>
